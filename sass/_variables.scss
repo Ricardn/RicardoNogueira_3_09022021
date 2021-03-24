@@ -1,0 +1,23 @@
+/** Color Library **/
+    
+    /* Loader */
+    $color-background: #fff;
+    $color-loader-border: #99E2D0;
+
+
+
+/** Shadow Library **/
+
+@mixin box-shadow($params) {
+    -webkit-box-shadow : $params;
+    -moz-box-shadow : $params;
+    box-shadow : $params;
+}
+
+/** Loader **/
+
+@mixin loader-border {
+    border: 8px solid transparent;
+    border-right-color: $color-loader-border;
+    border-radius: 50%;
+}

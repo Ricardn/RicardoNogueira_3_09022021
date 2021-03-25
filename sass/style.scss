@@ -7,10 +7,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 body {
-    background-color: $color-background;
+    background-color: $color-white;
 }
 
 
@@ -24,7 +25,7 @@ body {
     @include box-shadow(#{0 0 0.5rem rgb(0 0 0 / 25%)});
     .header-logo {
         width: 50%;
-        padding-left: 20%;
+        padding-left: 22%;
     }
 }
 
@@ -35,11 +36,15 @@ body {
     .header-main-title {
         font-weight: bold;
         margin: 5% 15% 0% 15%;
-        .header-sub-title{
-            font-weight: normal;
-        }
+    }
+    .header-sub-title{
+        display: flex;
+        text-align: center;
+        color: $color-fas;
+        margin: 5% 10% 5% 10%;
     }
 }
+
 
 /** Nav **/
 
@@ -63,3 +68,88 @@ nav {
             padding-top: 1.5%;
         }
 }
+
+.explore-btn {
+    display: flex;
+    justify-content: center;
+    @include explore-btn;
+    @include box-shadow (#{4px 4px 10px rgb(0 0 0 / 25%)});
+    p {
+        color:$color-white;
+    }
+}
+
+/** Fonctionnement **/
+
+.fonctionnement-title {
+    margin: 10% 0% 0% 5%;
+}
+
+.rond-logo {
+    display: flex;
+    position: absolute;
+    background: $color-primary;
+    border-radius: 100%;
+    width: 25px;
+    left: 20px;
+    margin-top: 15px;
+    span {
+        font-weight: bold;
+        color: $color-white;
+        padding-left: 7px;
+        margin: 2px 0px 2px 0px;
+    }
+}
+
+.fonction-list .fas {
+    display: flex;
+    flex-flow: row;
+    color: $color-fas;
+    p {
+        color: black;
+        margin-left: 20px;
+    }
+}
+
+.chose-btn {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    @include fonctionnement-btn;
+    .btn-content {
+        max-width: 80%;
+        font-weight: normal;
+        font-size: 90%;
+        margin: 20px 40px 20px 40px;
+    }
+}
+
+/** Restaurants **/
+
+#restaurants {
+    display: flex;
+    flex-flow: column;
+    background-color: $color-restaurants;
+    margin-top: 20%;
+}
+
+.restaurants-title {
+    font-weight: bold;
+    margin-left: 5%;
+    padding-top: 10%;
+}
+
+.restaurant-box {
+    @include rest-box;
+    .restaurant-picture {
+        @include rest-pic;
+    }
+    .new-badge {
+        @include rest-new
+    }
+    .restaurant-fav {
+        display: flex;
+        padding-left: 92%;
+    }
+}
+

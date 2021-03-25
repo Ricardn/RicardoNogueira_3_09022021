@@ -1,12 +1,16 @@
 /** Color Library **/
     
+    $color-primary: #9356DC;
+    $color-secondary: #FF79DA;
+    $color-tertiary: #99E2D0;
     $color-grey: #FAFAFA;
+    $color-white: #fff;
     $color-accent: #F3F3F3;
-
-    /* Loader */
-    $color-background: #fff;
     $color-loader-border: #99E2D0;
-
+    $color-fas: #7e7e7e;
+    $color-restaurants: #F6F6F6;
+    $color-explore-btn: linear-gradient(0deg,rgba(147,86,220,.9)
+    ,rgba(255,121,218,.9));
 
 
 /** Shadow Library **/
@@ -23,4 +27,52 @@
     border: 8px solid transparent;
     border-right-color: $color-loader-border;
     border-radius: 50%;
+}
+
+/** Header **/
+
+@mixin explore-btn {
+    margin-left: 22%;
+    width: 50%;
+    padding: 12px;
+    border-radius: 30px;
+    background-image: $color-explore-btn;
+}
+
+@mixin fonctionnement-btn {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-left: 30px;
+    border-radius: 20px;
+    width: 80%;
+    @include box-shadow(#{0 0 0.5rem rgb(0 0 0 / 25%)});
+}
+
+/** Restaurants **/
+
+@mixin rest-box {
+    display: flex;
+    background-color: $color-white;
+    width: 90%;
+    margin: 8% 0% 8% 5%;
+    border-radius: 15px 15px 15px 15px;
+    @include box-shadow (#{0 0 0.5rem rgb(0 0 0 / 25%)});
+}
+
+@mixin  rest-pic {
+    width: 100%;
+    height: 192px;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+}
+
+@mixin rest-new {
+    display: flex;
+    position: relative;
+    background-color: $color-tertiary;
+    color: #1b6150;
+    width: 21%;
+    margin-left: 79%;
+    bottom: 65%;
+    border-radius: 2px;
 }

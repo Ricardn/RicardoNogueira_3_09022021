@@ -1,5 +1,6 @@
 @import './_animation.scss';
 @import './_variables.scss';
+@import './responsive.scss';
 
 /** Body **/
 
@@ -11,6 +12,7 @@
 }
 
 body {
+    min-width: 100%;
     background-color: $color-white;
 }
 
@@ -20,12 +22,12 @@ body {
 .logo {
     display: flex;
     position: relative;
-    width: 100%;
+    max-width: 100%;
     padding: 16px;
     @include box-shadow(#{0 0 0.5rem rgb(0 0 0 / 25%)});
     .header-logo {
         width: 50%;
-        padding-left: 22%;
+        padding-left: 27%;
     }
 }
 
@@ -74,7 +76,7 @@ nav {
     justify-content: center;
     @include explore-btn;
     @include box-shadow (#{4px 4px 10px rgb(0 0 0 / 25%)});
-    p {
+    span {
         color:$color-white;
     }
 }
@@ -91,7 +93,7 @@ nav {
     background: $color-primary;
     border-radius: 100%;
     width: 25px;
-    left: 20px;
+    left: 25px;
     margin-top: 15px;
     span {
         font-weight: bold;
@@ -148,8 +150,6 @@ nav {
         @include rest-new
     }
     .restaurant-fav {
-        display: flex;
-        padding-left: 92%;
+        @include rest-fav;
     }
 }
-

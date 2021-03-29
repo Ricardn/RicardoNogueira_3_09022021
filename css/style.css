@@ -101,20 +101,16 @@
   }
 }
 /** Header **/
-.explore-btn {
-  display: flex;
-  justify-content: center;
-  margin-left: 22%;
-  width: 50%;
-  padding: 12px;
-  border-radius: 30px;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-}
-.explore-btn :hover {
+.explore-btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+.chose-btn:hover {
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.chose-btn:hover i {
+  color: #9356DC;
 }
 
 /** Restaurants **/
@@ -184,6 +180,14 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  font-family: "shrikhand", "sans-serif";
 }
 
 body {
@@ -318,17 +322,32 @@ nav {
   margin-top: 20%;
 }
 
+.restaurant-content {
+  display: flex;
+  flex-flow: column;
+  margin-left: 2%;
+  position: relative;
+}
+
 .restaurants-title {
   font-weight: bold;
   margin-left: 5%;
   padding-top: 10%;
 }
 
+.content-title {
+  margin-top: 5%;
+}
+
+.restaurant-location {
+  margin-bottom: 5%;
+}
+
 .restaurant-box {
   display: flex;
   background-color: #fff;
   width: 90%;
-  margin: 8% 0% 8% 5%;
+  margin: 5% 0% 8% 5%;
   border-radius: 15px 15px 15px 15px;
   -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -353,9 +372,36 @@ nav {
   border-radius: 2px;
 }
 .restaurant-box .restaurant-fav {
-  display: flex;
-  width: 100px;
+  position: absolute;
   color: black;
+  margin-left: 90%;
+  margin-top: 5%;
+}
+
+/** Footer **/
+footer {
+  background-color: #353535;
+}
+
+footer h1 {
+  color: white;
+  font-size: 20px;
+  padding-left: 10%;
+}
+
+.footer-content i {
+  color: white;
+  padding-right: 3%;
+}
+
+.footer-content li {
+  padding-left: 10%;
+  padding-bottom: 2%;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

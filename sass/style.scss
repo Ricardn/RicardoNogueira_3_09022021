@@ -1,6 +1,7 @@
 @import './_animation.scss';
 @import './_variables.scss';
 @import './responsive.scss';
+@import './restaurants.scss';
 
 /** Body **/
 
@@ -9,6 +10,14 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+}
+
+a {
+    color: inherit; 
+}
+
+h1 {
+    font-family: 'shrikhand','sans-serif';
 }
 
 body {
@@ -135,10 +144,25 @@ nav {
     margin-top: 20%;
 }
 
+.restaurant-content {
+    display: flex;
+    flex-flow: column;
+    margin-left: 2%;
+    position: relative;
+}
+
 .restaurants-title {
     font-weight: bold;
     margin-left: 5%;
     padding-top: 10%;
+}
+
+.content-title {
+    margin-top: 5%;
+}
+
+.restaurant-location {
+    margin-bottom: 5%
 }
 
 .restaurant-box {
@@ -152,4 +176,31 @@ nav {
     .restaurant-fav {
         @include rest-fav;
     }
+}
+
+/** Footer **/
+
+footer {
+    background-color: $color-footer;
+}
+
+footer h1 {
+    color: white;
+    font-size: 20px;
+    padding-left: 10%;
+}
+
+.footer-content i {
+    color: white;
+    padding-right: 3%;
+}
+
+.footer-content li {
+    padding-left: 10%;
+    padding-bottom: 2%;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
 }

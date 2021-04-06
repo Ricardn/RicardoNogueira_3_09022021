@@ -12,12 +12,12 @@
 }
 
 .page-loader {
-    background-color: rgba(10, 10, 10, 0.6);
     width: 100%;
     animation: loader-animation 10ms ease-out 3000ms forwards;
 }
 
 .loader {
+    z-index: 9999;
     width: 200px;
     height: 200px;
     position: absolute;
@@ -137,4 +137,9 @@
         transition-duration: .25s;
         cursor: pointer;
     }
+}
+
+.restaurant-box:hover {
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+    transition: 0.2s;
 }

@@ -1,28 +1,312 @@
-@media only screen and (min-width : 320px) and (orientation: portrait) {
-    body {
-        max-width: 768px;
-    }
+/** Phone **/
 
-   #logo {
-    justify-items: center;
-    padding-left: 15%;
-    width: 80%;
+@media screen and (max-width : 414px) and (max-height : 736px ) and (orientation: portrait) {
+
+   .dish-item-price {
+      margin-left: 10%;
    }
-   .header-logo {
-       width: 80%;
-       justify-content: center;
+
+}
+
+@media screen and (max-width : 667px) and (max-height : 375px ) and (orientation: landscape) {
+   
+   body {
+       max-width: 812px;
+   }
+   
+  .header-logo {
+      width: 80%;
+      margin-left: 30%;
+  }
+
+  .header-sub-title p{
+   margin-left: 4%;
+   }
+
+  .location-city {
+     flex-direction: row;
+  }
+  .gps-logo {
+      margin-left: 12%;
+      transform: translateY(6px);
+   }
+   
+   .fonctionnement-title h2{
+      margin-left: 2%;
+   }
+
+   .rond-logo {
+      margin-left: 4%;
+   }
+
+   .dish-item-price {
+      margin-left: 42%;
+   }
+
+  .dishes:hover .dish-item-infos p {
+     display: flex;
+     overflow: visible;
+     width: 250px;
+  }
+
+  .dishes {
+   overflow: visible;
+   }
+
+   .footer-title {
+      transform: translateY(50px);
+   }
+   
+   .footer-content {
+      margin-left: 50%;
+      transform: translateY(-10px);
    }
 }
 
+@media screen and (min-width : 668px) and (max-width : 736px) and (max-height : 414px ) and (orientation: landscape) {
+   
+   body {
+       max-width: 812px;
+   }
+   
+  .header-logo {
+      width: 80%;
+      margin-left: 38%;
+  }
 
+  .header-sub-title p{
+   margin-left: 10%;
+   }
 
+  .location-city {
+     flex-direction: row;
+  }
+  .gps-logo {
+      margin-left: 12%;
+      transform: translateY(6px);
+   }
+   
+   .fonctionnement-title h2{
+      margin-left: 2%;
+   }
+
+   .rond-logo {
+      margin-left: 4%;
+   }
+
+   .dishes .dish-item .dish-item-price {
+      margin-left: 47%;
+  }
+
+  .dishes:hover .dish-item-infos p {
+     display: flex;
+     overflow: visible;
+     width: 250px;
+  }
+
+  .dishes {
+   overflow: visible;
+   }
+
+   .footer-title {
+      transform: translateY(50px);
+   }
+   
+   .footer-content {
+      margin-left: 50%;
+      transform: translateY(-10px);
+   }
+}
+
+@media screen and (min-width : 736px) and (max-width : 812px) and (max-height : 375px ) and (orientation: landscape) {
+  
+   body {
+      max-width: 812px;
+   }
+  
+   .header-logo {
+     width: 80%;
+     margin-left: 45%;
+   }
+
+   .gps-logo {
+      margin-left: 15%;
+      transform: translateY(8px);
+   }
+
+   
+   .header-sub-title p{
+      margin-left: 13%;
+   }
+
+   .fonctionnement-title h2{
+      margin-left: 3%;
+   }
+
+   .rond-logo {
+      margin-left: 5%;
+   }
+
+   .dishes .dish-item .dish-item-price {
+      margin-left: 54%;
+  }
+
+  .footer-title {
+   transform: translateY(50px);
+}
+
+.footer-content {
+   margin-left: 50%;
+   transform: translateY(-10px);
+}
+}
 
 
 
 /** Tablet **/
-@media only screen and (min-width : 768px) {
-   /* Styles here */
+@media screen and (min-width : 768px) and (max-width : 1199px) and (max-height : 1024px) and (orientation : portrait){
+
+   .header-logo {
+      width: 80%;
+      margin-left: 40%;
+   }
+
+   .location-city {
+      margin-right: 4%;
+   }
+
+   .gps-logo {
+      margin-left: 10%;
+      transform: translateY(8px);
+   }
+
+   .header-sub-title p{
+      margin-left: 11%;
+   }
+
+   .fonctionnement-title h2{
+      margin-left: 5%;
+   }
+
+   .rond-logo {
+      margin-left: 5%;
+   }
+
+   .dishes .dish-item .dish-item-price {
+      margin-left: 51%;
+  }
+
+  .footer-title {
+   transform: translateY(50px);
 }
+
+.footer-content {
+   margin-left: 50%;
+   transform: translateY(-10px);
+}
+}
+
+@media screen and (min-width : 1024px) and (max-width : 1200px) and (min-height : 768px) and (orientation : landscape){
+   .header-logo {
+      width: 80%;
+      margin-left: 70%;
+   }
+
+   .location {
+      max-height: 10px;
+   }
+
+   .location-city {
+      margin-right: 4%;
+      transform: translateY(-15px);
+   }
+
+   .gps-logo {
+      margin-left: 16%;
+   }
+
+   .header-sub-title p{
+      margin-left: 20%;
+   }
+
+   nav {
+      max-height: 280px;
+   }
+
+   #fonctionnement {
+      max-height: 100px;
+   }
+
+   .fonctionnement-title h2{
+      transform: translateY(-45px);
+   }
+
+   .chose-btn {
+      display: flex;
+      flex-direction: row;
+      max-width: 300px;
+   }
+
+   .chose-btn-1 {
+      margin-right: 65%;
+    }
+
+   .chose-btn-2 {
+      transform: translateY(-95px);
+      margin-left: 28%;
+      .rond-logo {
+         margin-left: 5%;
+      }
+   }
+
+   .chose-btn-3 {
+      transform: translateY(-172px);
+      margin-left: 64%;
+      .rond-logo {
+         margin-right: 1%;
+      }
+   }
+
+   .restaurant-picture {
+      max-width: 100%;
+   }
+   .restaurant-box {
+      max-width: 40%;
+   }
+
+   .restaurant-box-2 {
+      position: absolute;
+      transform: translate(500px, -320px);
+   }
+
+   .restaurant-box-4 {
+      position: absolute;
+      transform: translate(500px, -320px);
+   }
+
+   .new-badge {
+      display: block;
+      position: absolute;
+   }
+
+   .footer-title {
+      transform: translateY(50px);
+   }
+   
+   .footer-content {
+      margin-left: 50%;
+      transform: translateY(-10px);
+   }
+}
+
+
+
+
+
+
+
+
+
 
 /** Laptop **/
 @media only screen and (min-width : 1200px) {

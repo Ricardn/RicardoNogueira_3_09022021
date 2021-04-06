@@ -1,3 +1,26 @@
+.starter-plate {
+  animation: dish-animated 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.main-plate {
+  animation: dish-animated 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.dessert-plate {
+  animation: dish-animated 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes dish-animated {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .menu-fav:hover {
     .far {
         font-weight: 600;
@@ -6,29 +29,6 @@
         cursor: pointer;
     }
 }
-
-.starter:hover{
-    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
-    cursor: pointer;
-    .hide-check{
-        display: block;
-        position: relative;
-        background: $color-tertiary;
-        text-align: center;
-        height: 100%;
-        transform: translateY(-105%);
-        i {
-            margin-top: 50%;
-            color: $color-white;
-        }
-    }
-}
-
-
-
-
-
-
 
 .burger {
     border: 0;
@@ -82,3 +82,4 @@
       }
     }
   }
+

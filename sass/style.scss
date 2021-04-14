@@ -37,194 +37,206 @@ body {
     display: flex;
     position: relative;
     max-width: 100%;
-    padding: 16px;
+    justify-content: center;
+    padding: 18px;
     @include box-shadow(#{0 0 0.5rem rgb(0 0 0 / 25%)});
     .header-logo {
-        width: 50%;
-        padding-left: 27%;
+        width: 200px;
+        justify-content: center;
     }
 }
-
-.header-title {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    .header-main-title {
-        font-weight: bold;
-        margin: 5% 15% 0% 15%;
-    }
-    .header-sub-title{
-        display: flex;
-        text-align: center;
-        color: $color-fas;
-        margin: 5% 10% 5% 10%;
-    }
-}
-
-
-/** Nav **/
 
 nav {
     background-color: $color-grey;
-    padding-bottom: 10%;
-}
+    max-width: 100%;
+    padding-bottom: 40px;
 
-.location {
+    .location {
+    display: flex;
     background-color: $color-accent;
-    padding-bottom: 5%;
+    padding-bottom: 12px;
+    max-width: 100%;
+    justify-content: center;
         p {
-            display: flex;
-            justify-content: center;
+            width: 100%;
             font-weight: bold;
+            margin-top: 20px;
         }
         .gps-logo i{
-            margin-left: 30%;
-            transform: translateY(25px);
+            font-size: medium;
+            margin-right: 10px;
+            margin-top: 20px;
         }
-}
+    }
+    .header-title {
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        .header-main-title {
+            font-weight: bold;
+/*
+            margin: 5% 15% 0% 15%;*/
 
-.explore-btn {
-    display: flex;
-    justify-content: center;
-    @include explore-btn;
-    @include box-shadow (#{4px 4px 10px rgb(0 0 0 / 25%)});
-    span {
+            margin-top: 40px;
+
+        }
+        .header-sub-title{
+            display: block;
+            text-align: center;
+            color: $color-fas;
+            margin-top: 40px;
+        }
+    }
+
+    .explore-btn {
+        display: block;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        margin: auto;
+        padding: 12px;
+        margin-top: 40px;
+        border-radius: 30px;
+        max-width: 200px;
+        background: $color-explore-btn;
         color:$color-white;
+        text-align: center;
     }
 }
+
 
 /** Fonctionnement **/
 
-.fonctionnement-title {
-    margin: 10% 0% 0% 5%;
-}
+#fonctionnement {
+    max-width: 100%;
 
-.rond-logo {
-    display: flex;
-    position: absolute;
-    background: $color-primary;
-    border-radius: 100%;
-    width: 25px;
-    left: 25px;
-    margin-top: 15px;
-    span {
-        font-weight: bold;
-        color: $color-white;
-        padding-left: 7px;
-        margin: 2px 0px 2px 0px;
+    .fonctionnement-title {
+        margin: 40px;
     }
-}
 
-.fonction-list .fas {
-    display: flex;
-    flex-flow: row;
-    color: $color-fas;
-    p {
-        color: black;
-        margin-left: 20px;
-    }
-}
-
-.fa-mobile-alt {
-    transform: translateX(8px);
-}
-
-.chose-btn {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    @include fonctionnement-btn;
-    .btn-content {
-        max-width: 80%;
-        font-weight: normal;
-        font-size: 90%;
-        margin: 20px 40px 20px 40px;
+    .fonction-list {
+        max-width: 100%;
+        
+        .chose-btn {
+            max-width: 100%;
+            @include fonctionnement-btn;
+            .btn-content {
+                max-width: 100%;
+                font-size: 600;
+                padding: 15px;
+                margin: 20px 40px 20px 40px;
+                p {
+                    position: absolute;
+                    font-weight: 600;
+                    color: black;
+                    margin-left: 15px;
+                    transform: translateY(-18px);
+                }
+                
+                .fas {
+                    position: relative;
+                    color: $color-fas;
+                    transform: translateX(-15px);
+                }
+            }
+            .rond-logo {
+                position: sticky;
+                background: $color-primary;
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                left: 25px;
+                float: left;
+                margin-top: 15px;
+                transform: translateX(-10px);
+                span {
+                    font-weight: bold;
+                    color: $color-white;
+                    padding-left: 5px;
+                }
+            }
+        }
     }
 }
 
 /** Restaurants **/
 
 #restaurants {
-    display: flex;
-    flex-flow: column;
     background-color: $color-restaurants;
-    margin-top: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 10%;
-    h2 {
-        margin-bottom: 5%;
+    margin-top: 40px;
+    padding: 20px;
+    justify-content: center;
+
+
+    .restaurants-section {
+        .restaurants-title {
+            margin-bottom: 30px;
+        }
+   
+        .restaurant-box {
+            background-color: $color-white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+            @include rest-fav;
+            .restaurant-box-header {
+                height: 200px;
+                overflow: hidden;
+                border-radius: 15px 15px 0px 0px;
+                img.restaurant-picture {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        
+            .restaurant-content h3, p {
+                margin-top: 2%;
+                margin-left: 2%;
+            }
+            .new-badge {
+                text-align: center;
+                font-weight: 600;
+                padding: 2px;
+                background-color: #99E2D0;
+                color: #488073;
+                width: 80px;
+                border-radius: 2px;
+                transform: translateY(-240px);
+                float: right;
+                margin-right: 10px;
+            }
+        }
     }
 }
 
-.restaurant-box {
-    background-color: $color-white;
-    border-radius: 15px;
-    margin-bottom: 5%;
-    padding-bottom: 2%;
-    @include rest-fav;
-}
-
-.restaurant-box-header {
-    height: 200px;
-    overflow: hidden;
-    border-radius: 15px 15px 0px 0px;
-}
-
-.restaurant-box-header img.restaurant-picture {
-    width: 100%;
-    display: block;
-}
-
-.restaurant-content h3, p {
-    margin-top: 2%;
-    margin-left: 2%;
-}
-
-.new-badge {
-    position: absolute;
-    text-align: center;
-    font-weight: 600;
-    padding: 2px;
-    background-color: #99E2D0;
-    color: #488073;
-    width: 21%;
-    margin-left: 65%;
-    border-radius: 2px;
-    margin-top: 5%;
-}
 
 /** Footer **/
 
 footer {
+    min-width: 100%;
     background-color: $color-footer;
-}
 
-footer h1 {
-    color: white;
-    font-size: 20px;
-    padding-left: 10%;
-}
+    .footer-title h1 {
+        color: $color-white; 
+        font-size: 20px;
+        padding-left: 10%;
+    }
 
-.footer-content i {
-    color: white;
-    padding-right: 3%;
-}
-
-.footer-content li {
-    padding-left: 10%;
-    padding-bottom: 2%;
-}
-
-.footer-content a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
-}
-
-.footer-1 {
-    margin-left: 7px;
+    .footer-content {
+        i {
+            color: white;
+            padding-right: 3%;
+        }
+        li {
+            padding-left: 10%;
+            padding-bottom: 2%;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-1 {
+            margin-left: 7px;
+        } 
+    }
 }

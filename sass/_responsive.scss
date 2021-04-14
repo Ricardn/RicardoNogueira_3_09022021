@@ -1,13 +1,22 @@
 /** Phone **/
 @media screen and (min-width : 667px) and (min-height : 300px ) and (max-height : 768px) and (orientation: landscape) {
 
-   .footer-title {
-      transform: translateY(50px);
-   }
-   
-   .footer-content {
-      margin-left: 50%;
-      transform: translateY(-10px);
+   footer {
+      display: flex;
+      justify-content: center;
+      height: 100px;
+      .footer-title {
+         display: flex;
+         margin-top: 35px;
+         margin-right: 50px;
+         float: left;
+         transform: translateY(-10px);
+      }
+      .footer-content {
+         position: relative;
+         margin-left: 50%;
+         transform: translateY(10px);
+      }
    }
 }
 
@@ -15,15 +24,23 @@
 
 @media screen and (min-width : 768px) and (max-width : 1200px) and (max-height : 1024px) and (orientation : portrait){
 
-   .footer-title {
-      transform: translateY(50px);
+   footer {
+      display: flex;
+      justify-content: center;
+      height: 100px;
+      .footer-title {
+         display: flex;
+         margin-top: 35px;
+         margin-right: 50px;
+         float: left;
+         transform: translateY(-10px);
+      }
+      .footer-content {
+         position: relative;
+         margin-left: 50%;
+         transform: translateY(10px);
+      }
    }
-   
-   .footer-content {
-      margin-left: 50%;
-      transform: translateY(-10px);
-   }
-   
 }
 
 /** Tablet (Landscape) **/ 
@@ -38,25 +55,22 @@
       display: flex;
       justify-content: center;
       height: 150px;
-
       .fonctionnement-title {
          display: flex;
          position: absolute;
-     }
+      }
       .fonction-list {
          display: flex;
          margin-top: 70px;
          .chose-btn-1, .chose-btn-2, .chose-btn-3 {
             display: block;
             width: 345px;
-            
             .btn-content {
                display: block;
                p {
                   text-align: center;
                   width: 200px;
-
-              }
+               }
             }
          }
       }
@@ -74,7 +88,6 @@
             display: flex;
             position: absolute;
          }
-     
          .restaurant-box {
             position: relative;
             width: 400px;
@@ -85,16 +98,23 @@
       }
    }
 
-   .footer-title {
-      transform: translateY(50px);
+   footer {
+      display: flex;
+      justify-content: center;
+      height: 100px;
+      .footer-title {
+         display: flex;
+         margin-top: 35px;
+         margin-right: 50px;
+         float: left;
+         transform: translateY(-10px);
+      }
+      .footer-content {
+         position: relative;
+         margin-left: 50%;
+         transform: translateY(10px);
+      }
    }
-   
-   .footer-content {
-      margin-left: 50%;
-      transform: translateY(-10px);
-   }
-
-   
 }
 
 
@@ -115,11 +135,10 @@
       display: flex;
       justify-content: center;
       height: 150px;
-
       .fonctionnement-title {
          display: flex;
          position: absolute;
-     }
+      }
       .fonction-list {
          display: flex;
          margin-top: 70px;
@@ -132,8 +151,7 @@
                p {
                   text-align: center;
                   width: 200px;
-
-              }
+               }
             }
          }
       }
@@ -141,7 +159,6 @@
 
    #restaurants {
       display: flex;
-      
       .restaurants-section {
          display: flex;
          flex-wrap: wrap;
@@ -151,7 +168,6 @@
             display: flex;
             position: absolute;
          }
-     
          .restaurant-box {
             position: relative;
             width: 400px;
@@ -161,9 +177,6 @@
          }
       }
    }
-
-
-
 
    .menu-container {
       display: flex;
@@ -175,16 +188,13 @@
       .menu-fav {
          transform: translateX(1000px);
       }
-
    }
    .menu-content {
       display: flex;
       width: 100%;
-
       .dishes {
          margin: 10px;
          transform: translateX(-120px);
-         
       }
       .starter-plate ,.main-plate ,.dessert-plate {
          width: 390px;
@@ -201,29 +211,21 @@
       transform: translateX(640px);
    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   .footer-title {
-      transform: translateY(50px);
+   footer {
+      display: flex;
+      justify-content: center;
+      height: 100px;
+      .footer-title {
+         display: flex;
+         margin-top: 35px;
+         margin-right: 50px;
+         float: left;
+         transform: translateY(-10px);
+      }
+      .footer-content {
+         position: relative;
+         margin-left: 50%;
+         transform: translateY(10px);
+      }
    }
-   
-   .footer-content {
-      margin-left: 50%;
-      transform: translateY(-10px);
-   }
-
-   
 }

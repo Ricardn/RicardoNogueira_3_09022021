@@ -169,24 +169,42 @@
 /** Restaurants **/
 /** Phone **/
 @media screen and (min-width: 667px) and (min-height: 300px) and (max-height: 768px) and (orientation: landscape) {
-  .footer-title {
-    transform: translateY(50px);
+  footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
   }
-
-  .footer-content {
-    margin-left: 50%;
+  footer .footer-title {
+    display: flex;
+    margin-top: 35px;
+    margin-right: 50px;
+    float: left;
     transform: translateY(-10px);
+  }
+  footer .footer-content {
+    position: relative;
+    margin-left: 50%;
+    transform: translateY(10px);
   }
 }
 /** Tablet **/
 @media screen and (min-width: 768px) and (max-width: 1200px) and (max-height: 1024px) and (orientation: portrait) {
-  .footer-title {
-    transform: translateY(50px);
+  footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
   }
-
-  .footer-content {
-    margin-left: 50%;
+  footer .footer-title {
+    display: flex;
+    margin-top: 35px;
+    margin-right: 50px;
+    float: left;
     transform: translateY(-10px);
+  }
+  footer .footer-content {
+    position: relative;
+    margin-left: 50%;
+    transform: translateY(10px);
   }
 }
 /** Tablet (Landscape) **/
@@ -241,13 +259,22 @@
     margin-left: 20px;
   }
 
-  .footer-title {
-    transform: translateY(50px);
+  footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
   }
-
-  .footer-content {
-    margin-left: 50%;
+  footer .footer-title {
+    display: flex;
+    margin-top: 35px;
+    margin-right: 50px;
+    float: left;
     transform: translateY(-10px);
+  }
+  footer .footer-content {
+    position: relative;
+    margin-left: 50%;
+    transform: translateY(10px);
   }
 }
 /** Desktop **/
@@ -336,13 +363,22 @@
     transform: translateX(640px);
   }
 
-  .footer-title {
-    transform: translateY(50px);
+  footer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
   }
-
-  .footer-content {
-    margin-left: 50%;
+  footer .footer-title {
+    display: flex;
+    margin-top: 35px;
+    margin-right: 50px;
+    float: left;
     transform: translateY(-10px);
+  }
+  footer .footer-content {
+    position: relative;
+    margin-left: 50%;
+    transform: translateY(10px);
   }
 }
 /** Color Library **/
@@ -563,7 +599,7 @@
   justify-content: space-between;
 }
 .menu-container .menu-header h1 {
-  font-size: 180%;
+  font-size: xx-large;
 }
 .menu-container .menu-content .menu-content-title {
   margin-left: 20px;
@@ -745,7 +781,7 @@
   text-decoration: none;
 }
 
-li {
+ul, li {
   list-style-type: none;
 }
 
@@ -854,7 +890,7 @@ nav .explore-btn {
 }
 #fonctionnement .fonction-list .chose-btn .btn-content {
   max-width: 100%;
-  font-size: 600;
+  font-size: medium;
   padding: 15px;
   margin: 20px 40px 20px 40px;
 }
@@ -943,16 +979,19 @@ footer {
 }
 footer .footer-title h1 {
   color: #fff;
-  font-size: 20px;
-  padding-left: 10%;
+  font-size: xx-large;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  padding-bottom: 10px;
 }
 footer .footer-content i {
   color: white;
-  padding-right: 3%;
-}
-footer .footer-content li {
-  padding-left: 10%;
-  padding-bottom: 2%;
+  padding-right: 10px;
 }
 footer .footer-content a {
   color: white;

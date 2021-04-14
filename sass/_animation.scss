@@ -2,119 +2,130 @@
 
 /** Loader **/
 
-@keyframes loader-animation {
+.page-loader {
+    position: absolute;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(14, 14, 14, 0.5);
+    animation: loader-animation 10ms;
+    -webkit-animation: loader-animation .5s ease-out 2.5s both;
+    animation: loader-animation .5s ease-out 2.5s both;
+
+    .loader {
+        position: absolute;
+        display: block;
+        width: 200px;
+        height: 200px;
+        padding: 30px;
+        background: $color-white;
+        border-radius: 100%;
+        @include box-shadow(#{0 2px 20px rgba(0, 0, 0, 0.2)});
+
+        &:before,
+        &:after {
+            content: "";
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &:before {
+            display: block;
+            background-image: url(../images/page-loader/top.png);
+            height: 35%;
+            animation-duration: 2s;
+            animation-fill-mode: none;
+            animation-name: loader-animation-pot;
+        }
+
+        &:after {
+            display: block;
+            background-image: url(../images/page-loader/bottom.png);
+            height: 65%;
+        }
+    }
+
+    .loader-spinner {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        animation: animation-loader-spin 3s;
+        box-sizing: border-box;
+        @include loader-border;
+    }
+}
+
+@-webkit-keyframes loader-animation {
     0% {
         opacity: 1;
+        z-index: 3;
     }
     100% {
         opacity: 0;
+        z-index: 0;
     }
 }
-
-.page-loader {
-    width: 100%;
-    animation: loader-animation 10ms ease-out 3000ms forwards;
-}
-
-.loader {
-    z-index: 9999;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    bottom: 30%;
-    left: 25%;
-    padding: 2%;
-    background: $color-white;
-    border-radius: 100%;
-    @include box-shadow(#{0 2px 20px rgba(0, 0, 0, 0.2)});
-}
-
-.loader .loader-content {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    animation: animation-loader-spin 3s;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    @include loader-border;
-}
-
-.loader:before, .loader:after {
-    content: '';
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.loader:before {
-    display: block;
-    background-image: url(../images/page-loader/top.png);
-    height: 35%;
-    animation-duration: 2s;
-    animation-fill-mode: none;
-    animation-name: loader-animation-pot;
-}
-
-.loader:after {
-    display: block;
-    background-image: url(../images/page-loader/bottom.png);
-    height: 65%;
+@keyframes loader-animation {
+    0% {
+        opacity: 1;
+        z-index: 3;
+    }
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
 }
 
 @keyframes loader-animation-pot {
     0% {
-    transform: rotate(0);
+        transform: rotate(0);
     }
     45% {
-    transform: translate3d(-4%, -13%, 0) rotate(-13deg);
+        transform: translate3d(-4%, -13%, 0) rotate(-13deg);
     }
     55% {
-    transform: translate3d(1%, -2%, 0) rotate(6deg);
+        transform: translate3d(1%, -2%, 0) rotate(6deg);
     }
     65% {
-    transform: translate3d(-2%, -4%, 0) rotate(-3deg);
+        transform: translate3d(-2%, -4%, 0) rotate(-3deg);
     }
     75% {
-    transform: translate3d(2%, 3%, 0) rotate(3deg);
+        transform: translate3d(2%, 3%, 0) rotate(3deg);
     }
     80% {
-    transform: translate3d(-2%, 1%, 0) rotate(-2deg);
+        transform: translate3d(-2%, 1%, 0) rotate(-2deg);
     }
     to {
-    transform: none;
+        transform: none;
     }
 }
 
 @keyframes animation-loader-spin {
     0% {
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-    transform: rotate(359deg);
+        transform: rotate(359deg);
     }
 }
 
 /** Header **/
 
 .explore-btn:hover {
-        box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+    @include box-shadow(#{0 0 0.5rem rgb(0 0 0 / 25%)});
 }
 
 
+/** Fonctionnement **/
 
 .chose-btn:hover {
-    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
     cursor: pointer;
-    i {
-        color: $color-primary;
-    }
+    background-color: #9256dc90;
 }
-
-
-
 
 /** Restaurants **/
 
@@ -142,4 +153,10 @@
 .restaurant-box:hover {
     box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
     transition: 0.2s;
+}
+
+/** Footer **/
+
+.footer-content a:hover {
+    text-decoration: underline;
 }

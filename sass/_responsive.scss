@@ -126,7 +126,7 @@
 
 /** Desktop **/
 
-@media screen and (min-width : 1366px) {
+@media screen and (min-width : 1366px) and (min-height : 768px) {
 
 * {
    max-width: 100%;
@@ -146,7 +146,6 @@
          .chose-btn-1, .chose-btn-2, .chose-btn-3 {
             display: block;
             width: 345px;
-            
             .btn-content {
                display: block;
                p {

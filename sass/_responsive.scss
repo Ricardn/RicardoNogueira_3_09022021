@@ -1,6 +1,5 @@
 /** Phone **/
 @media screen and (min-width : 667px) and (min-height : 300px ) and (max-height : 768px) and (orientation: landscape) {
-
    footer {
       display: flex;
       justify-content: center;
@@ -23,7 +22,9 @@
 /** Tablet **/
 
 @media screen and (min-width : 768px) and (max-width : 1200px) and (max-height : 1024px) and (orientation : portrait){
-
+   .menu-fav {
+      margin-left: 400px;
+   }
    footer {
       display: flex;
       justify-content: center;
@@ -45,7 +46,7 @@
 
 /** Tablet (Landscape) **/ 
 
-@media screen and (min-width: 1024px) and (min-height: 768px)  and (max-height : 1366px) and (orientation: landscape) {
+@media screen and (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
    
    body {
       width: 1024px;
@@ -125,7 +126,7 @@
 
 /** Desktop **/
 
-@media screen and (min-width : 1366px) and (min-height : 768px) {
+@media screen and (min-width : 1366px) {
 
 * {
    max-width: 100%;
@@ -180,41 +181,32 @@
 
    .menu-container {
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      width: 1420px;
-      height: 600px;
       margin: auto;
+      width: 1400px;
+      height: 600px;
       .menu-fav {
          transform: translateX(1000px);
       }
-   }
-   .menu-content {
-      display: flex;
-      width: 100%;
-      .dishes {
-         margin: 10px;
-         transform: translateX(-120px);
+      .menu-content {
+         display: flex;
+         width: 90%;
+         height: 100%;
+         .menu-content-title {
+            transform: translateY(50px);
+         }
+         .plate {
+            transform: translateX(-78px);
+            margin-top: 140px;
+            max-width: 400px;
+            height: 300px;
+         }
       }
-      .starter-plate ,.main-plate ,.dessert-plate {
-         width: 390px;
-         margin: auto;
-         margin-left: 30px;
-         margin-right: 10px;
-      }
-   }
-
-   .order-btn {
-      display: block;
-      position: absolute;
-      margin-top: 350px;
-      transform: translateX(640px);
    }
 
    footer {
       display: flex;
       justify-content: center;
-      height: 100px;
+      min-height: 100px;
       .footer-title {
          display: flex;
          margin-top: 35px;

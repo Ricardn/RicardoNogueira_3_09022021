@@ -1,8 +1,8 @@
 @import './_animation.scss';
 @import './_variables.scss';
-@import './_responsive.scss';
 @import './_restaurants.scss';
 @import './_rest-animation.scss';
+@import './_responsive.scss';
 
 /** Body **/
 
@@ -179,6 +179,7 @@ nav {
 /** Footer **/
 
 footer {
+    position: absolute;
     min-width: 100%;
     background-color: $color-footer;
     .footer-title h1 {
